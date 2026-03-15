@@ -9,13 +9,13 @@ public class PasswordValidator {
 
         //write your code here
         if (password == null || repeatPassword == null) {
-            throw new PasswordValidationException("Wrong passwords");
+            throw new PasswordValidationException("Your passwords are incorrect. Try again.");
         }
         if (!password.equals(repeatPassword)) {
-            throw new PasswordValidationException("Wrong passwords");
+            throw new PasswordValidationException("Your passwords are incorrect. Try again.");
         }
         if (password.length() < MIN_PASSWORD_LENGTH) {
-            throw new PasswordValidationException("Wrong passwords");
+            throw new PasswordValidationException("Your passwords are too short. Try again.");
         }
     }
 }
