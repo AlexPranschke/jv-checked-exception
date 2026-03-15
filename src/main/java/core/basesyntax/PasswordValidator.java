@@ -12,10 +12,10 @@ public class PasswordValidator {
             throw new PasswordValidationException("Your passwords are incorrect. Try again.");
         }
         if (!password.equals(repeatPassword)) {
-            throw new PasswordValidationException("Your passwords are incorrect. Try again.");
+            throw new PasswordValidationException("Wrong passwords");
         }
         if (password.length() < MIN_PASSWORD_LENGTH) {
-            throw new PasswordValidationException("Your passwords are too short. Try again.");
+            throw new PasswordValidationException("Your passwords are incorrect. Try again.");
         }
     }
 }
